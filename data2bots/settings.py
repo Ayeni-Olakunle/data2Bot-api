@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_on_heroku
 # import django_on_heroku
 
 
@@ -28,7 +29,7 @@ SECRET_KEY = 'django-insecure-x)^3hqh)%6t*7p+z$5fm7mizxs#^v*7g((pu=xxivvf6j1wc!6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 AUTH_USER_MODEL = 'authentication.User'
 
@@ -132,6 +133,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+django_on_heroku.settings(locals())
 # django_on_heroku.settings(locals())
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
