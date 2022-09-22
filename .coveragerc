@@ -1,0 +1,7 @@
+[run]
+source=authentication/,ecommerce/,
+omit=
+    venv
+    */migrations/*
+    */test/*
+    */__init__.py/*
